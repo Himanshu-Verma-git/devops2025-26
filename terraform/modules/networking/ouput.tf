@@ -18,12 +18,19 @@ output "private_subnet_ids" {
   value       = azurerm_subnet.private[*].id
 }
 
-output "database_subnet_ids" {
-  description = "database subnets IDs"
-  value       = azurerm_subnet.database[*].id
+# output "database_subnet_ids" {
+#   description = "database subnets IDs"
+#   value       = azurerm_subnet.database[*].id
+# }
+
+# output "appgw_subnet_id" {
+#   description = "ID of the Application Gateway subnet"
+#   value       = azurerm_subnet.agw.id
+# }
+
+output "agw_pip_id" {
+  description = "Public IP ID for Application Gateway"
+  value       = azurerm_public_ip.agw_pip.id
+  
 }
 
-output "appgw_subnet_id" {
-  description = "ID of the Application Gateway subnet"
-  value       = azurerm_subnet.agw.id
-}

@@ -12,3 +12,12 @@ output "backend_http_settings" {
   description = "backend http settings"
   value       = azurerm_application_gateway.main.backend_http_settings[*].id
 }
+
+output "agw_backend_address_pool_id" {
+  description = "Application Gateway backend address pool ID"
+  value = one([
+    for pool in azurerm_application_gateway.main.backend_address_pool : pool.id
+    if pool.name == "vmss-backend-pool"
+  ])
+  
+}

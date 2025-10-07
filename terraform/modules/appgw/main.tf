@@ -5,8 +5,8 @@ resource "azurerm_application_gateway" "main" {
   resource_group_name = var.resource_group_name
 
   sku {
-    name     = "WAF_v2"
-    tier     = "WAF_v2"
+    name     = "Standard_v2"
+    tier     = "Standard_v2"
     capacity = 2
   }
 
@@ -48,6 +48,7 @@ resource "azurerm_application_gateway" "main" {
 
   request_routing_rule {
     name                       = "rule1"
+    priority = 100
     rule_type                  = "Basic"
     http_listener_name         = "appgw-http-listener"
     backend_address_pool_name  = "vmss-backend-pool"

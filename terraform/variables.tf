@@ -34,10 +34,10 @@ variable "private_subnet_prefixes" {
   type        = list(string)
 }
 
-variable "agw_subnet_prefixes" {
-  description = "Address prefix for the Application Gateway subnet"
-  type        = string
-}
+# variable "agw_subnet_prefixes" {
+#   description = "Address prefix for the Application Gateway subnet"
+#   type        = string
+# }
 
 variable "environment" {
   description = "The environment for the resources (e.g., dev, prod)."

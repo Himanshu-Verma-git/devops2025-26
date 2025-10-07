@@ -34,10 +34,10 @@ variable "private_subnet_prefixes" {
   type        = list(string)
 }
 
-variable "agw_subnet_prefixes" {
-  description = "Address prefix for the Application Gateway subnet"
-  type        = string
-}
+# variable "agw_subnet_prefixes" {
+#   description = "Address prefix for the Application Gateway subnet"
+#   type        = string
+# }
 
 # variable "database_subnet_prefixes" {
 #   description = "List of address prefixes for database subnets"
