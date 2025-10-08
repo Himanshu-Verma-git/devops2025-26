@@ -3,6 +3,7 @@ location = "Central India"
 resource_group_name = "rg-dev-01"
 tags = {
   environment = "dev"
+  pipeline = "try"
   project     = "midsem-project"
 }
 vnet_address_space = "10.0.0.0/16"
