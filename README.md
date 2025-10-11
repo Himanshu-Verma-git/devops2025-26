@@ -127,8 +127,8 @@ Example:
 
 |Record |Type	|Name	|Value	|Purpose|
 |:--:|:--:|:--:|:--:|:--:|
-|A	|@	|<AGW Public IP>	|Root |domain mapping|
-|CNAME	|www	|<yourdomain>.azure.com	|Subdomain |alias|
+|A	|@	|<\AGW Public IP>	|Root |domain mapping|
+|CNAME	|www	|<\yourdomain>.azure.com	|Subdomain |alias|
 
 # 📘 Best Practices
 
