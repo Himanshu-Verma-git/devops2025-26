@@ -29,6 +29,7 @@ Terraform is used to automate Azure resource provisioning with a **modular and e
 
 ### 📂 Directory Structure
 
+```bash
 ├── backend.sh
 ├── env
 │   ├── dev
@@ -59,7 +60,7 @@ Terraform is used to automate Azure resource provisioning with a **modular and e
 ├── providers.tf
 ├── README.md
 └── variables.tf
-
+```
 
 ### 🧩 Key Features
 - **Modular Design:** Enables reusability and better management across environments.
