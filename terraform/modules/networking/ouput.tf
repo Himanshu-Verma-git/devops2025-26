@@ -28,9 +28,9 @@ output "private_subnet_ids" {
 #   value       = azurerm_subnet.agw.id
 # }
 
-output "agw_pip_id" {
-  description = "Public IP ID for Application Gateway"
-  value       = azurerm_public_ip.agw_pip.id
+# output "agw_pip_id" {
+#   description = "Public IP ID for Application Gateway"
+#   value       = azurerm_public_ip.agw_pip.id
   
-}
+# }
 

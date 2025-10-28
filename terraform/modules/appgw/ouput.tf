@@ -21,3 +21,8 @@ output "agw_backend_address_pool_id" {
   ])
   
 }
+output "agw_pip_id" {
+  description = "Public IP ID for Application Gateway"
+  value       = azurerm_public_ip.agw_pip.id
+  
+}

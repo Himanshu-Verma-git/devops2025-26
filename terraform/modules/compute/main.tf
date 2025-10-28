@@ -4,17 +4,21 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   location                        = var.location
   resource_group_name             = var.resource_group_name
   sku                             = "Standard_B1s"
-  instances                       = 2
+  instances                       = var.instance_count
   admin_username                  = var.admin_username
   admin_password                  = var.admin_password
   computer_name_prefix            = "frontendvm"
   disable_password_authentication = false
 
   source_image_reference {
-    publisher = "Canonical"
-    offer     = "UbuntuServer"
-    sku       = "18.04-LTS"
-    version   = "latest"
+    publisher = var.source_image.publisher
+    offer     = var.source_image.offer
+    sku       = var.source_image.sku
+    version   = var.source_image.version
+    # publisher = "Canonical"
+    # offer     = "UbuntuServer"
+    # sku       = "18.04-LTS"
+    # version   = "latest"
   }
 
   os_disk {

@@ -56,3 +56,17 @@ variable "docker_image" {
   type        = string
 
 }
+
+variable "instance_count" {
+  description = "value"
+  type = number
+}
+
+variable "source_image" {
+  type = object({
+    publisher = string
+    offer     = string
+    sku       = string
+    version   = string
+  })
+}

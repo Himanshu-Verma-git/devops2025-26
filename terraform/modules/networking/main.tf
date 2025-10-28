@@ -129,14 +129,14 @@ resource "azurerm_subnet_network_security_group_association" "private_nsg_assoc"
 }
 
 # Public IP for AGW
-resource "azurerm_public_ip" "agw_pip" {
-  name                = "${var.resource_name_prefix}-agw-pip"
-  location            = var.location
-  resource_group_name = var.resource_group_name
-  allocation_method   = "Static"
-  sku                 = "Standard"
-  tags                = var.tags
-}
+# resource "azurerm_public_ip" "agw_pip" {
+#   name                = "${var.resource_name_prefix}-agw-pip"
+#   location            = var.location
+#   resource_group_name = var.resource_group_name
+#   allocation_method   = "Static"
+#   sku                 = "Standard"
+#   tags                = var.tags
+# }
 
 # Public IP for NAT Gateway
 resource "azurerm_public_ip" "nat_pip" {

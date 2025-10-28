@@ -21,10 +21,18 @@ module "application-gateway" {
   resource_name_prefix = var.resource_name_prefix
   location             = var.location
   resource_group_name  = var.resource_group_name
-  tags                 = var.tags
   subnet_id            = module.networking.public_subnet_ids[0]
+  sku_capacity = var.sku_capacity
+  frontend_port_name = var.frontend_port_name
+  frontend_ip_configuration_name = var.frontend_ip_configuration_name
+  backend_address_pool_name = var.backend_address_pool_name
+  backend_http_settings_name = var.backend_http_settings_name
+  http_listener_name = var.http_listener_name
+  request_routing_rule_name = var.request_routing_rule_name
   # subnet_id = module.networking.azurerm_subnet.public[0].id
-  agw_pip_id = module.networking.agw_pip_id
+  tags                 = var.tags
+  agw_pip_id = module.appgw.agw_pip.id
+  priority = var.priority
 }
 
 module "compute" {
@@ -39,4 +47,6 @@ module "compute" {
   admin_password                               = var.admin_password
   application_gateway_backend_address_pool_ids = module.application-gateway.agw_backend_address_pool_id
   docker_image                                 = var.docker_image
+  instance_count = var.instance_count
+  source_image = var.source_image
 }
