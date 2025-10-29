@@ -13,16 +13,20 @@ output "backend_http_settings" {
   value       = azurerm_application_gateway.main.backend_http_settings[*].id
 }
 
+# output "agw_backend_address_pool_id" {
+#   description = "Application Gateway backend address pool ID"
+#   value = one([
+#     for pool in azurerm_application_gateway.main.backend_address_pool : pool.id
+#     if pool.name == "vmss-backend-pool"
+#   ])
+  
+# }
 output "agw_backend_address_pool_id" {
   description = "Application Gateway backend address pool ID"
-  value = one([
-    for pool in azurerm_application_gateway.main.backend_address_pool : pool.id
-    if pool.name == "vmss-backend-pool"
-  ])
-  
+  value       = azurerm_application_gateway.main.backend_address_pool
 }
-output "agw_pip_id" {
-  description = "Public IP ID for Application Gateway"
-  value       = azurerm_public_ip.agw_pip.id
+# output "agw_pip_id" {
+#   description = "Public IP ID for Application Gateway"
+#   value       = azurerm_public_ip.agw_pip.id
   
-}
+# }

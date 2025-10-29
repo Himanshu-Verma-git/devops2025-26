@@ -87,15 +87,15 @@ variable "backend_http_settings_name" {
   type = string
 }
 
-variable "frontend_port_name" {
-  description = "value"
-  type = string
-}
+# variable "frontend_port_name" {
+#   description = "value"
+#   type = string
+# }
 
-variable "frontend_ip_configuration_name" {
-  description = "value"
-  type = string 
-}
+# variable "frontend_ip_configuration_name" {
+#   description = "value"
+#   type = string 
+# }
 
 variable "http_listener_name" {
   description = "value"
@@ -112,10 +112,10 @@ variable "priority" {
   type = number
 }
 
-variable "backend_http_settings_name" {
-  description = "value"
-  type = string
-}
+# variable "backend_http_settings_name" {
+#   description = "value"
+#   type = string
+# }
 
 variable "instance_count" {
   description = "value"

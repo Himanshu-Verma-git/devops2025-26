@@ -42,7 +42,7 @@ variable "environment" {
 
 variable "application_gateway_backend_address_pool_ids" {
   description = "The ID of the Application Gateway backend address pool."
-  type        = string
+  type        = list
 
 }
 

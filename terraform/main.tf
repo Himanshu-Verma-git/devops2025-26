@@ -31,7 +31,7 @@ module "application-gateway" {
   request_routing_rule_name = var.request_routing_rule_name
   # subnet_id = module.networking.azurerm_subnet.public[0].id
   tags                 = var.tags
-  agw_pip_id = module.appgw.agw_pip.id
+  # agw_pip_id = module.application-gateway.agw_pip.id
   priority = var.priority
 }
 

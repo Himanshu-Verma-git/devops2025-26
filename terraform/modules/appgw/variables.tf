@@ -26,10 +26,10 @@ variable "tags" {
 
 }
 
-variable "agw_pip_id" {
-  description = "PIP agw"
-  type        = string
-}
+# variable "agw_pip_id" {
+#   description = "PIP agw"
+#   type        = string
+# }
 
 variable "sku_capacity" {
   description = "number of skus"
@@ -55,15 +55,15 @@ variable "backend_http_settings_name" {
   type = string
 }
 
-variable "frontend_port_name" {
-  description = "value"
-  type = string
-}
+# variable "frontend_port_name" {
+#   description = "value"
+#   type = string
+# }
 
-variable "frontend_ip_configuration_name" {
-  description = "value"
-  type = string 
-}
+# variable "frontend_ip_configuration_name" {
+#   description = "value"
+#   type = string 
+# }
 
 variable "http_listener_name" {
   description = "value"
@@ -80,9 +80,9 @@ variable "priority" {
   type = number
 }
 
-variable "backend_http_settings_name" {
-  description = "value"
-  type = string
-}
+# variable "backend_http_settings_name" {
+#   description = "value"
+#   type = string
+# }
 
 
